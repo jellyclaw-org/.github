@@ -1,6 +1,6 @@
 <div align="center">
-
-<img src="assets/jellyclaw-logo-pixel.png" alt="JellyClaw" width="560" />
+<img src="https://raw.githubusercontent.com/JellyClaw-org/.github/main/assets/jellyclaw-logo-pixel.png" alt="JellyClaw" width="560" />
+</div>
 
 **The AI team that works while you sleep.**
 
