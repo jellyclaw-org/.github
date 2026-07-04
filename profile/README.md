@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🪼 JellyClaw
+<img src="assets/jellyclaw-logo-pixel.png" alt="JellyClaw" width="560" />
 
 **The AI team that works while you sleep.**
 
@@ -11,7 +11,7 @@ Ollama-powered. Open source.
 [![Website](https://img.shields.io/badge/jellyclaw.in-ff4fa3?style=for-the-badge&logo=googlechrome&logoColor=white)](https://jellyclaw.in)
 [![Docs](https://img.shields.io/badge/Docs-1a1a1a?style=for-the-badge&logo=readthedocs&logoColor=white)](https://jellyclaw.in/docs)
 [![X](https://img.shields.io/badge/@trybild-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/trybild)
-[![Discord](https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/your-invite-here)
+[![Discord](https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/GUbgEhHvxt)
 [![Reddit](https://img.shields.io/badge/r%2FJellyClaw-FF4500?style=for-the-badge&logo=reddit&logoColor=white)](https://reddit.com/r/JellyClaw)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
 
@@ -33,7 +33,7 @@ hardware and your models.
 > **Status:** the core engine is in active development. The
 > architecture below reflects the current build — some pieces are
 > still landing. Follow along in [Issues](../../issues) and
-> [Releases](../../releases), or drop into [Discord](https://discord.gg/your-invite-here)
+> [Releases](../../releases), or drop into [Discord](https://discord.gg/GUbgEhHvxt)
 > / [r/JellyClaw](https://reddit.com/r/JellyClaw) — both are just
 > getting started, so it's early days and a good time to shape things.
 
