@@ -1,74 +1,41 @@
-<div align="center">
-<img src="https://raw.githubusercontent.com/JellyClaw-org/.github/main/assets/jellyclaw-logo-pixel.png" alt="JellyClaw" width="560" />
-</div>
+# 🪼 JellyClaw — The Local AI Office
 
-**The AI team that works while you sleep.**
+<p align="center">
+  <img src="https://raw.githubusercontent.com/JellyClaw-org/.github/main/assets/jellyclaw-logo-pixel.png" alt="JellyClaw" width="560" />
+</p>
 
-A hierarchy of local AI agents — CEO → Department Heads → Workers —
-running entirely on your own hardware. Self-hosted. YAML-configured.
-Ollama-powered. Open source.
+<p align="center"><b>YOUR OFFICE. YOUR MACHINE. YOUR RULES.</b></p>
 
-[![Website](https://img.shields.io/badge/jellyclaw.in-ff4fa3?style=for-the-badge&logo=googlechrome&logoColor=white)](https://jellyclaw.in)
-[![Docs](https://img.shields.io/badge/Docs-1a1a1a?style=for-the-badge&logo=readthedocs&logoColor=white)](https://jellyclaw.in/docs)
-[![X](https://img.shields.io/badge/@trybild-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/trybild)
-[![Discord](https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/GUbgEhHvxt)
-[![Reddit](https://img.shields.io/badge/r%2FJellyClaw-FF4500?style=for-the-badge&logo=reddit&logoColor=white)](https://reddit.com/r/JellyClaw)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
+<p align="center">
+  <a href="https://jellyclaw.in"><img src="https://img.shields.io/badge/WEBSITE-jellyclaw.in-ff4fa3?style=for-the-badge" /></a>
+  <a href="https://jellyclaw.in/docs"><img src="https://img.shields.io/badge/DOCS-read-1a1a1a?style=for-the-badge&logo=readthedocs&logoColor=white" /></a>
+  <a href="https://discord.gg/GUbgEhHvxt"><img src="https://img.shields.io/badge/DISCORD-join-5865F2?style=for-the-badge&logo=discord&logoColor=white" /></a>
+  <a href="https://reddit.com/r/JellyClaw"><img src="https://img.shields.io/badge/REDDIT-r%2FJellyClaw-FF4500?style=for-the-badge&logo=reddit&logoColor=white" /></a>
+  <a href="https://x.com/trybild"><img src="https://img.shields.io/badge/X-@trybild-000000?style=for-the-badge&logo=x&logoColor=white" /></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/LICENSE-MIT-blue?style=for-the-badge" /></a>
+</p>
 
-</div>
+**JellyClaw** is a *local AI office* you run on your own machine. You
+describe a team in one YAML file — a CEO Agent, Department Heads, and
+Worker Agents — and JellyClaw runs that hierarchy on your hardware via
+[Ollama](https://ollama.com). Give the CEO a goal; it plans, delegates
+down the chain, and reports back to you. Ollama is just the engine —
+**the product is the team.**
 
----
+No cloud. No API bills. No data leaving your machine.
 
-## What is JellyClaw?
-
-JellyClaw is a local multi-agent orchestration tool. You describe a
-team in a YAML file — a CEO Agent, one or more Department Heads, and
-Worker Agents under each — and JellyClaw runs that hierarchy on your
-own machine using [Ollama](https://ollama.com). The CEO takes a goal,
-delegates it down the chain, and reports results back to you.
-
-No cloud, no data leaving your machine, no subscription. Just your
-hardware and your models.
-
+> [!NOTE]
 > **Status:** the core engine is in active development. The
 > architecture below reflects the current build — some pieces are
 > still landing. Follow along in [Issues](../../issues) and
-> [Releases](../../releases), or drop into [Discord](https://discord.gg/GUbgEhHvxt)
-> / [r/JellyClaw](https://reddit.com/r/JellyClaw) — both are just
+> [Releases](../../releases), or drop into
+> [Discord](https://discord.gg/GUbgEhHvxt) /
+> [r/JellyClaw](https://reddit.com/r/JellyClaw) — both are just
 > getting started, so it's early days and a good time to shape things.
 
 ---
 
-## How it works
-
-```
-        You
-         │
-         ▼
-   ┌───────────┐
-   │ CEO Agent │  ← takes your goal, makes a plan, delegates
-   └─────┬─────┘
-         │
-   ┌─────┴─────┬─────────────┐
-   ▼           ▼             ▼
-┌────────┐ ┌────────┐   ┌────────┐
-│  Dept  │ │  Dept  │   │  Dept  │  ← routes tasks, reviews work
-│  Head  │ │  Head  │   │  Head  │
-└───┬────┘ └───┬────┘   └───┬────┘
-    │          │            │
- ┌──┴──┐    ┌──┴──┐      ┌──┴──┐
- ▼     ▼    ▼     ▼      ▼     ▼
-Worker Worker Worker Worker Worker Worker   ← execute with tools
-```
-
-Each agent runs its own Ollama model — mix and match freely (e.g. a
-fast small model for the CEO, a coding-tuned model for a worker that
-writes code). Results roll back up the chain and land in your
-messaging channel.
-
----
-
-## Quick Start
+## ⚡ Quick Start
 
 **Requirements:** Python 3.11+, [uv](https://docs.astral.sh/uv/), and
 [Ollama](https://ollama.com) running locally.
@@ -100,7 +67,36 @@ uv run jellyclaw init
 
 ---
 
-## Configuration
+## 🏢 How it works
+
+```
+        You
+         │
+         ▼
+   ┌───────────┐
+   │ CEO Agent │  ← takes your goal, makes a plan, delegates
+   └─────┬─────┘
+         │
+   ┌─────┴─────┬─────────────┐
+   ▼           ▼             ▼
+┌────────┐ ┌────────┐   ┌────────┐
+│  Dept  │ │  Dept  │   │  Dept  │  ← routes tasks, reviews work
+│  Head  │ │  Head  │   │  Head  │
+└───┬────┘ └───┬────┘   └───┬────┘
+    │          │            │
+ ┌──┴──┐    ┌──┴──┐      ┌──┴──┐
+ ▼     ▼    ▼     ▼      ▼     ▼
+Worker Worker Worker Worker Worker Worker   ← execute with tools
+```
+
+Each agent runs its own Ollama model — mix and match freely (a fast
+small model for the CEO, a coding-tuned model for the worker that
+writes code). Results roll back up the chain and land in your
+messaging channel.
+
+---
+
+## 📝 Configuration
 
 Everything is one YAML file. Here's the `dev-team` template:
 
@@ -131,7 +127,7 @@ escalation:
 
 | Field | What it does |
 |---|---|
-| `channel` | Where you talk to the CEO Agent. `telegram` for now — see [Roadmap](#roadmap). |
+| `channel` | Where you talk to the CEO Agent. `telegram` for now — see [Roadmap](#%EF%B8%8F-roadmap). |
 | `ceo` | The top-level agent. Takes your goal, plans, delegates. |
 | `departments[].head` | Breaks a department's slice of the goal into worker tasks, reviews results. |
 | `departments[].workers[]` | Executes tasks using the `tools` it's allowed to use. |
@@ -142,7 +138,7 @@ the exact field if something's wrong.
 
 ---
 
-## Talking to your team
+## 💬 Talking to your team
 
 Once `jellyclaw run` (or the background daemon — see below) is
 running, message your CEO Agent directly:
@@ -154,14 +150,16 @@ running, message your CEO Agent directly:
   panel to talk to the CEO from your browser (never exposed beyond
   `127.0.0.1`)
 
-Discord support is planned — see [Roadmap](#roadmap).
+Discord support is planned — see [Roadmap](#%EF%B8%8F-roadmap).
 
 ---
 
-## Running 24/7
+## 🌙 Running 24/7
+
+The AI team that works while you sleep:
 
 ```bash
-jellyclaw daemon install   # runs jellyclaw in the background, survives reboots
+jellyclaw daemon install   # runs in the background, survives reboots
 jellyclaw daemon status
 jellyclaw daemon logs
 jellyclaw daemon stop
@@ -175,7 +173,7 @@ validity, and daemon status in one shot.
 
 ---
 
-## Tools
+## 🔧 Tools
 
 Agents can use tools you allow per-worker in the YAML. Built in today:
 
@@ -188,7 +186,7 @@ More tools are straightforward to add — see `jellyclaw/tools/registry.py`.
 
 ---
 
-## Roadmap
+## 🗺️ Roadmap
 
 JellyClaw ships in phases, in the open:
 
@@ -206,7 +204,7 @@ public. [Watch the repo](../../subscription) or check
 
 ---
 
-## Contributing
+## 🤝 Contributing
 
 Issues and PRs are welcome. Before sending a PR:
 
@@ -219,9 +217,8 @@ Issues and PRs are welcome. Before sending a PR:
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for the full guide.
 
----
-
-## Development
+<details>
+<summary><b>Development setup & verification checklist</b></summary>
 
 ```bash
 git clone https://github.com/JellyClaw-org/jellyclaw.git
@@ -230,7 +227,7 @@ uv sync
 uv run pytest -v
 ```
 
-Manual verification checklist:
+Manual verification:
 
 - [ ] `uv run jellyclaw init` → pick a template
 - [ ] `uv run jellyclaw validate` passes
@@ -240,9 +237,11 @@ Manual verification checklist:
 - [ ] `uv run jellyclaw dashboard` opens on localhost and shows the agent hierarchy
 - [ ] A message sent from the dashboard reaches the CEO the same way a Telegram message would
 
+</details>
+
 ---
 
-## About
+## 🪼 About
 
 JellyClaw is built by [TryBild](https://github.com/TryBild), a
 Mumbai-based product studio. It's the only fully open-source project
@@ -251,10 +250,14 @@ SaaS.
 
 ---
 
-<div align="center">
-
-**[jellyclaw.in](https://jellyclaw.in)** · **[Docs](https://jellyclaw.in/docs)** · **[@trybild](https://x.com/trybild)** · **[Discord](https://discord.gg/GUbgEhHvxt)** · **[r/JellyClaw](https://reddit.com/r/JellyClaw)**
-
-MIT Licensed — see [LICENSE](LICENSE)
-
-</div>
+<p align="center">
+  <b><a href="https://jellyclaw.in">jellyclaw.in</a></b> ·
+  <b><a href="https://jellyclaw.in/docs">Docs</a></b> ·
+  <b><a href="https://x.com/trybild">@trybild</a></b> ·
+  <b><a href="https://discord.gg/GUbgEhHvxt">Discord</a></b> ·
+  <b><a href="https://reddit.com/r/JellyClaw">r/JellyClaw</a></b>
+  <br /><br />
+  MIT Licensed — see <a href="LICENSE">LICENSE</a>
+  <br />
+  Built in Mumbai, for everywhere. 🪼
+</p>
